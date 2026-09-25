@@ -68,7 +68,7 @@ t = 0 : 0.002 : 1.2;
 
 s_svarus = A * sin(2 * pi * f * t);
 n = sigma * randn(size(t));
-s = s_svarus + n;                 
+s = s_svarus + n;                 % pradinis signalas
 
 s_atrinktas = s(s > U1);          
 s_filtruotas = s;
@@ -87,7 +87,6 @@ hold on;
 plot(t, s_svarus, ':', 'LineWidth', 1.25);
 yline(U1, '-c', 'LineWidth', 1.25);
 yline(U2, '--m', 'LineWidth', 1.25);
-yline(-U2, '--m', 'LineWidth', 1.25);
 hold off;
 grid on;
 xlim([t(1), t(end)]);
@@ -95,7 +94,7 @@ ylim([min(s) - 1, max(s) + 1]);
 xlabel('Laikas t, s');
 ylabel('Itampa U, V');
 title('Pradinis ir filtruotas signalai', 'Color', 'b', 'FontSize', 13, 'FontWeight', 'bold');
-legend('Pradinis signalas', 'Filtruotas signalas', ['U_1 = ', num2str(U1), ' V'], ['U_2 = ', num2str(U2), ' V'], ['-U_2 = ', num2str(-U2), ' V'], 'Location', 'southwest');
+legend('Pradinis signalas', 'Filtruotas signalas', ['U_1 = ', num2str(U1), ' V'], ['U_2 = ', num2str(U2), ' V'], 'Location', 'southwest');
 
 
 subplot(1, 2, 2);
