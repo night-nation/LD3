@@ -74,10 +74,10 @@ s_atrinktas = s(s > U1);
 s_filtruotas = s;
 s_filtruotas(abs(s_filtruotas) < U2) = 0;
 
-dydis_s = length(s)
-dydis_s_atrinktas = length(s_atrinktas)
-max_filtruotas = max(s_filtruotas)
-min_filtruotas = min(s_filtruotas)
+dydis_s = length(s);
+dydis_s_atrinktas = length(s_atrinktas);
+max_filtruotas = max(s_filtruotas);
+min_filtruotas = min(s_filtruotas);
 
 
 figure(4);
